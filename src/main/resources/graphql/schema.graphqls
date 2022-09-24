@@ -1,0 +1,29 @@
+type Query {
+    bookById(id: ID): Book
+    getBooks: [Book]
+}
+
+type Book {
+    id: ID
+    name: String
+    pageCount: Int
+    authorId: String
+    addressId: String
+    author: Author
+    address: Address
+}
+
+type Author {
+    id: ID
+    firstName: String
+    lastName: String
+}
+
+type Address {
+id: ID
+addressLine1: String
+addressLine2: String
+townOrCity: String
+county: String
+postCode: String
+}
